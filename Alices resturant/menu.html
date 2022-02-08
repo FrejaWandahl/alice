@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alice's Restaurant, Aarhus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+  <!--Burgermenu sættes op i navigationen-->
+      <nav>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Forside</a>
+            <a href="menu.html">Menukort</a>
+            <a href="#A3">Selskaber</a>
+            <a href="andenSide.html">Book et bord</a>
+            <a href="#A5">Ansatte</a>
+            <a href="#A6">Kontakt</a>
+        </div>
+
+        <div id="main">
+          <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+        </div>
+
+
+    </nav>
+
+
+  <div class="wrap">
+    <header>
+      <h1>Menukort</h1>
+      <h2 class="tagline">Se vores lækre menu herunder!!</h2>
+      <div id="resultat"></div>
+    </header>
+
+
+
+
+
+    <footer>
+      <div id="footerInfo"></div>
+    </footer>
+
+  </div>
+  <script src="js/alices.js"></script>
+
+  <script>
+
+//Selvstudie 5
+  //menu sat op med JSON
+
+  menu = `{
+    "menu": [
+      {
+        "id": 1,
+        "Titel": "Tatar",
+        "Beskrivelse": "Rørt tatar af oksemørbrad med sprød salat, trøffelmayo, æggeblomme",
+        "Pris": 70,
+        "Ret": "forret"
+      },
+      {
+        "id": 2,
+        "Titel": "Fiskesuppe",
+        "Beskrivelse": "Dampet fisk, rouille, emmentaler, croutoner",
+        "Pris": 60,
+        "Ret": "forret"
+      },
+      {
+        "id": 3,
+        "Titel": "Oksemørbrad",
+        "Beskrivelse": "Bagt selleri, svamperagout, pomme rissolle og sauce bordelaise",
+        "Pris": 175,
+        "Ret": "hovedret"
+      },
+      {
+        "id": 4,
+        "Titel": "Dagens fisk",
+        "Beskrivelse": "Dagens fisk (spørg venligst tjener)",
+        "Pris": 145,
+        "Ret": "hovedret"
+      },
+      {
+        "id": 5,
+        "Titel": "Gateau Marcel",
+        "Beskrivelse": "Intens og blød chokoladekage i selvskab med mango",
+        "Pris": 85,
+        "Ret": "dessert"
+      },
+      {
+        "id": 6,
+        "Titel": "Pære Belle Helene",
+        "Beskrivelse": "Vaniljeis af chokolade",
+        "Pris": 80,
+        "Ret": "dessert"
+      },
+      {
+        "id": 7,
+        "Titel": "Brød m smør",
+        "Beskrivelse": "Surdejsbrød m hjemmerørt smør",
+        "Pris": 45,
+        "Ret": "tilbehør"
+      }
+    ]
+  }`;
+
+
+
+  const xxx = JSON.parse(menu);
+  console.log( xxx.menu[0].Titel )
+
+  //loop der henter hele arrayet
+
+  for (let i=0; i<xxx.menu.length; i++){
+     console.log(xxx.menu[i].Titel)
+     resultat.innerHTML += `
+        <div class="menuting">
+          <h2> ${xxx.menu[i].Titel}  </h2>
+          <p> ${xxx.menu[i].Beskrivelse} </p>
+          <p> ${xxx.menu[i].Pris} </p>
+          </div>
+     `
+  }
+
+
+
+
+  </script>
+
+
+
+</body>
+</html>

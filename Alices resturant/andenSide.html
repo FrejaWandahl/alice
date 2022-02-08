@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alice's Restaurant, Aarhus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+  <!--Burgermenu sættes op i navigationen-->
+      <nav>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Forside</a>
+            <a href="menu.html">Menukort</a>
+            <a href="#A3">Selskaber</a>
+            <a href="andenSide.html">Book et bord</a>
+            <a href="#A5">Ansatte</a>
+            <a href="#A6">Kontakt</a>
+        </div>
+
+        <div id="main">
+          <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+        </div>
+
+
+    </nav>
+
+
+  <div class="wrap">
+    <header>
+      <h1>Alice's Restaurant</h1>
+      <h2 class="tagline">Book et bord lige her!</h2>
+    </header>
+
+
+
+
+    <main>
+
+      <form action="action.html">
+        <fieldset id="navn">
+          <legend>Indtast navn og email</legend>
+            Navn: <br> <input type="text" name="Name" value=""> <br>
+            Email: <br> <input type="text" name="Mailadresse" value="">
+            <div id="btn1" class="alleKnapperne">Næste</div>
+        </fieldset>
+
+        <fieldset id="radio">
+          <legend>Hvor ønsker I at sidde?</legend>
+          <!-- Radio buttons-->
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Udenfor</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">I gårdhaven</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">Indenfor</label>
+            <div id="btn2" class="alleKnapperne">Næste</div>
+        </fieldset>
+
+        <fieldset id="tjek">
+          <legend>Antal personer</legend>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1">1-3</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2">4-6</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3">flere end 6</label>
+
+            <div id="btn3" class="alleKnapperne">Næste</div>
+        </fieldset>
+
+        <fieldset id="lastField">
+          <legend>Din booking er nu modtaget og du vil høre fra os indenfor 12 timer</legend>
+        </fieldset>
+      </form>
+
+
+
+
+    </main>
+
+
+
+
+    <footer>
+      <div id="footerInfo"></div>
+    </footer>
+
+  </div>
+  <script src="js/alices.js"></script>
+
+  <!-- Link til JS dokument -->
+    <script src="java.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+/** Alice's Restaurant Aarhus **/
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Libre+Franklin:ital,wght@0,100;0,200;1,100&family=Roboto:wght@500&display=swap');
+
+
+/* Farver og typografi gemmes, som variable. */
+:root {
+  --gul: #f4e7c1;
+  --blaa: #c2e1f2;
+  --brun: #928481;
+  --lysblaa: #eaf7fe;
+  --grey: #444444;
+  --sort: #000;
+  --hvid: #fff;
+  --font-a: 'Fruktur', cursive;
+  --font-b: 'Libre Franklin', sans-serif;
+  --font-c: 'Roboto', sans-serif;
+}
+
+/* Typografi defineres og styles  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-b);
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+p,
+div {
+  font-family: var(--font-c);
+}
+
+
+/* flex */
+.flex {
+  display: flex;
+}
+
+/* center */
+.center {
+  text-align: center;
+}
+
+body {
+  font-family: var(--font-c);
+  background-color: var(--lysblaa);
+}
+
+/* Dokumentet nulstilles*/
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+/* Navigationsbar styles */
+/* Sidebar menu styles */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--blaa);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* Links i sidebar styles */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--brun);
+  display: block;
+  transition: 0.3s;
+}
+
+/* En hover over menu laves*/
+.sidebar a:hover {
+  color: var(--hvid);
+}
+
+/* Kryds som lukke menuen igen styles */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Menu knappen styles */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--gul);
+  color: var(--hvid);
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: var(--brun);
+}
+
+/* Introtekst styles */
+.introtekst {
+  text-align: center;
+  font-size: 16px;
+  background-color: var(--gul);
+  padding: 60px;
+  color: var(--brun);
+  line-height: 1.8;
+}
+
+/* Header og Footer styles */
+header,
+footer {
+  background-color: var(--gul);
+  text-align: center;
+  min-height: 45px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+
+/* Main styles */
+#main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  transition: margin-left .5s;
+}
+
+/* Responsive billede */
+img {
+  max-width: 100%;
+}
+
+.resp-img {
+  width: 100%;
+}
+
+
+#menu {
+  text-align: center;
+  padding: 50px;
+}
+
+
+#praktiskInfo {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+
+#navn,
+#radio,
+#tjek,
+#lastField{
+  text-align: center;
+}
+
+/* Formular styles  */
+#radio,
+#tjek,
+#lastField {
+  display: none;
+}
+
+.alleKnapperne {
+  background-color: var(--brun);
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#ytplayer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+}
+
+
+
+.menuting {
+  color: var(--grey);
+  padding: 10px;
+
+}
+
+
+
+/* Mediarules */
+@media only screen and (min-width: 800px) {
+  body {
+    background-color: lightblue;
+  }
+
+
+  .introtekst {
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+
+}
